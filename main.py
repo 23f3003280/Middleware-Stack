@@ -14,6 +14,9 @@ app = FastAPI()
 ALLOWED_ORIGINS = [
     "https://app-v033o4.example.com",
     # Add your actual exam page origin here
+    "https://app-h6sqte.example.com",
+    "https://exam.sanand.workers.dev",
+
 ]
 
 # Request context middleware
@@ -68,6 +71,10 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
 
 app.add_middleware(RateLimitMiddleware)
 
+@app.get("/")
+async def home():
+    return {"message": "Service is running"}
+    
 @app.get("/ping")
 async def ping(request: Request):
     return {
