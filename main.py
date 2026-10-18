@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 # Your logged-in email
-EMAIL = "23f3003450@ds.study.iitm.ac.in"
+EMAIL = "23f3003280@ds.study.iitm.ac.in"
 
 # Allowed browser origins
 ALLOWED_ORIGINS = [
